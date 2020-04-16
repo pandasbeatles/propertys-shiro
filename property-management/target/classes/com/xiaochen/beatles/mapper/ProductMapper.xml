@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaochen.beatles.mapper.ProductMapper">
+    <resultMap id="BaseResultMap" type="com.xiaochen.beatles.pojo.Product">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="INTEGER" property="name"/>
+        <result column="price" jdbcType="VARCHAR" property="price"/>
+    </resultMap>
+
+    <select id="getProductid" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from Product
+    where
+    id = #{id}
+  </select>
+
+
+    <select id="getProduct" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from Product
+  </select>
+</mapper>
